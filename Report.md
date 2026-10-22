@@ -7,7 +7,7 @@
 
 Поточна система OrderFlow є модульним монолітом, де всі 6 модулів (Checkout, Orders, Inventory, Payments, Notifications, Reporting) виконуються в одному процесі та використовують спільну in-memory базу даних[cite: 8].
 
-<img width="3952" height="5064" alt="OrderFlow Monolith Architecture-2026-10-22-115646" src="https://github.com/user-attachments/assets/3fc3a0a7-6467-4119-b5c9-8604e0eb74d4" />
+<img width="8192" height="3777" alt="OrderFlow Monolith Architecture-2026-10-22-115737" src="https://github.com/user-attachments/assets/4e2e583c-ffc4-468c-8f45-ded00e7023b7" />
 
 
 #### Виявлені проблеми та критичні залежності:
@@ -96,9 +96,7 @@
 1. Перевести Notifications на обробку подій `OrderCompletedEvent` через Event Bus / Queue[cite: 5, 8].
 2. Виділити Read Replica / CQRS Read Model для Reporting, щоб звіти не навантажували транзакційну БД[cite: 3, 5, 8].
 
-
-<img width="8192" height="3777" alt="OrderFlow Monolith Architecture-2026-10-22-115737" src="https://github.com/user-attachments/assets/27930730-c04a-4acb-96c6-a767b349936b" />
-
+<img width="3952" height="5064" alt="OrderFlow Monolith Architecture-2026-10-22-115646" src="https://github.com/user-attachments/assets/9cf47ef3-552f-4ad3-9a6f-98b39295fc17" />
 
 
 ### 6. Метрики та Fitness Functions для перевірки результату
